@@ -3,25 +3,54 @@
 <head>
 <meta name="viewport" content="width=device-width">
 <title>San Francisco Favorite Places</title>
+<link rel="stylesheet" href="./styles.css">
+<link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
 <style>
-html, body{
+html{
+	font-size: 16px;
+}
+ body{
 	width:100%;
 	height:100%
-	margin:0;
-	font-size: 16px;
+	/* margin: 0;  */
+	
+}
+.logoimg{
+	margin-top: 30px;
 }
 #labels {
 	float:left;
-	width:40%;
+	width:22%;
 	text-align:right;
+	margin-top: 10px;
 }
+/* #labels:last-child{
+	margin-top: 40px;
+} */
 #inputs {
 	float:right;
 	width:55%;
 	text-align:left;
+	margin-top: 5px;
 }
 #controls {
 	clear:both;
+	margin-bottom: 100px;
+	position: relative;
+}
+.positionbtn1{
+	position: absolute;
+	top: 10px;
+	left: 195px;
+	text-transform: capitalize;
+	background-color: darkturquoise;
+}
+.positionbtn2{
+	position: absolute;
+	top: 10px;
+	left: 290px;
+	text-transform: capitalize;
+	background-color: rgb(240, 14, 14);
 }
 #placeForm {
 	text-align:center;
@@ -30,9 +59,30 @@ html, body{
 </head>
 
 <body>
+<div class="container">
+		<header>
+				<img src="images/logo.png" width="350" height="100" alt="sf tours logo"  id="logo" />
+				<nav>
+				<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="cable-cars.html">Cable Cars</a></li>
+				<li><a href="chinatown.html">Chinatown</a></li>
+				<li><a href="fishermans-wharf.html">Fishermans Wharf</a></li>
+				<li><a href="pier39.html">Pier 39</a></li>
+				<li><a href="favorite-places.html">Favorite Places</a></li>
+				<li><a href="contact-us.html">Contact Us</a></li>
+				</ul>
+				</nav>
+				</header>
+				
+				  <div class="sidebar1">
+					<aside>
+					  <p class="quote">"It's an odd thing, but anyone who disappears is said to be seen in San   Francisco. It must be a delightful city and possess all the attractions   of the next world" - Oscar Wilde</p>
+					</aside>
+				</div>
 
 <div id="placeForm">
-<img src="images/logo.png" width="350" height="100">
+<img class="logoimg" src="images/logo.png" width="350" height="100">
 <h2>San Francisco Favorite Places</h2>
 <p>Places Stored : <span id="numPlaces">0</span></p>
 
@@ -60,9 +110,15 @@ html, body{
  </div>   
 
     <div id="controls">
-    	<button onClick="getLocation();">get location</button>
-   	 <button onClick="addPlace();">add a place</button>
-    </div>
+    	<button class="positionbtn1" onClick="getLocation();">get location</button>
+   	 <button class="positionbtn2" onClick="addPlace();">add a place</button>
+	</div>
+	<footer>
+			<p>
+			&copy; 2020 San Fransisco Designed By Paullaster
+			</p>
+			</footer>
+</div>
     
 <script>
 var count = 0;
