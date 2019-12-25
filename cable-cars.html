@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Cable Cars</title>
+<head>
+<title>Pier 39</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<style>
+#videoButton {
+	float:right;
+	margin-right: 40px;
+}
+</style>
+<!--[if lt IE 9] >
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<img src="images/logo.png" width="350" height="100" alt="sf tours logo"  id="logo" />
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="cable-cars.html">Cable Cars</a></li>
+<li><a href="chinatown.html">Chinatown</a></li>
+<li><a href="fishermans-wharf.html">Fishermans Wharf</a></li>
+<li><a href="pier39.html">Pier 39</a></li>
+</ul>
+</nav>
+</header>
+
+  <div class="sidebar1">
+    <aside>
+      <p class="quote">"It's an odd thing, but anyone who disappears is said to be seen in San   Francisco. It must be a delightful city and possess all the attractions   of the next world" - Oscar Wilde</p>
+    </aside>
+</div>
+
+<h1>San Francisco Attractions</h1>
+<h2>Cable Cars</h2>
+<a href="cablecar-video.html">
+<canvas id="videoButton" width="300" height="200"></canvas>
+</a>
+<img src="images/cablecar-closeup.jpg" width="300" height="225" alt="famous cable cars close up" />
+<section>
+<p>The San Francisco cable car system is the world's last permanently operational manually operated cable car system, in the US sense of a tramway whose cars are pulled along by cables embedded in the street. It is an icon of San Francisco, California. The cable car system forms part of the intermodal urban transport network operated by the San Francisco Municipal Railway, or "Muni" as it is better known. Cable cars operate on two routes from downtown near Union Square to Fisherman's Wharf, and a third route along California Street. </p>
+<p>While the cable cars are used to a certain extent by commuters, their small service area and premium fares for single rides make them more of a tourist attraction. They are among the most significant tourist sites in the city, along with Alcatraz Island and Fisherman's Wharf.</p>
+<p>It is the only transportation system listed on the National Register of Historic Places. </p>
+<img src="images/market-street-car.jpg" alt="a retro street car on Market street" width="200" height="150" class="rightimage" />
+<p>The cable cars are not to be confused with San Francisco's historic streetcars, which operate on Market Street and on the Embarcadero.</p>
+<p>&nbsp;</p>
+<p>Watch the <a href="cablecar-video.html">cable car video</a>.</p>
+</section>
+
+<footer>
+<p>
+&copy; 2020 San Fransisco Designed By Paullaster
+</p>
+</footer>
+
+</div>
+<script>
+	window.onload = function() {
+		var canvas = document.getElementById("videoButton");
+		var context = canvas.getContext("2d");
+
+		context.beginPath();
+		context.moveTo(50,50);
+		context.lineTo(250,50);
+		context.arcTo(275,50, 275,75,25);
+		context.arcTo(275,100, 250,100,25);
+		context.lineTo(50,100);
+		context.arcTo(25,100, 25,75,25);
+		context.arcTo(25,50, 50,50,25);
+
+		context.shadowColor = "#cccccc";
+		context.shadowBlur = 20;
+		context.shadowOffsetX = 10;
+		context.shadowOffsetY = 10;
+
+		context.stroke();
+		var grad = context.createLinearGradient(50,50, 50,100);
+		grad.addColorStop(0, "#5E7C88");
+		grad.addColorStop(.6, "white");
+		grad.addColorStop(1, "#5E7C88");
+		context.fillStyle = grad;
+		context.fill();
+
+		context.beginPath();
+		context.font = "bold 20pt Arial";
+		context.textAlign = "center";
+		context.textBaseline = "middle";
+
+		context.fillStyle = "white";
+		context.fillText("watch the video", 150, 75);
+		context.strokeStyle = "#363F45";
+		context.strokeText("watch the video", 150, 75);
+}
+</script>
+</body>
+</html>

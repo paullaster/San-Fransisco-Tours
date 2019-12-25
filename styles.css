@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* setting my custom font-face which i asigned my name in respect to the developer */
+@font-face {
+	font-family: paullasterokoth;
+	src: url(fonts/jmacscrl.eot),url(fonts/jmacscrl.ttf);
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0; 
+	padding: 0;
+	color: #000;
+}
+section{
+	font-family: paullasterokoth;
+	-moz-column-count: 3;
+        -moz-column-gap: 15px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 15px;
+        column-count: 3;
+	column-gap: 15px;
+}
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+
+	margin-top: 5;	
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+.photo {
+	-webkit-border-radius: 10px;
+    	border-radius: 10px;
+	-webkit-box-shadow:  10px 10px 8px 0px #666666;  
+        box-shadow:  10px 10px 8px 0px #666666;
+}
+a:link {
+	color: #36F;
+	text-decoration: none
+}
+a:visited {
+	color: #36F;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+	color: #FEB41C;
+}
+th {
+	text-align:right;
+}
+h1 {
+	font-size: 30px;
+	padding-top:10px;
+}
+h2 {
+	font-size: 20px;
+}
+
+.rightimage{
+	padding-left:15px;
+	padding-right:0px;
+	float:right;
+}
+.container {
+	width: 860px;
+	background: #FFFFFF;
+	margin: 0 auto;
+}
+header {
+	background: #363F45;
+}
+#logo {
+	background: #FEB41C; 
+	display:block;
+}
+.sidebar1 {
+	float: right;
+	width: 180px;
+	background: #5E7C88;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 680px;
+	float: right;
+}
+
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; 
+}
+.quote {
+	padding-top: 150px;
+	padding-bottom: 200px;
+	font-style:italic;
+	text-align: center;
+	font-size:12px;
+	color: #fff;
+}
+/* navigation */
+nav ul{
+background-color: #363F45;
+color: White;
+float: left;
+width: 100%;
+border-top: 1px solid #fff;
+}
+nav ul li { display: inline; }
+
+nav ul li a{
+padding: 3px 15px;
+color: White;
+text-decoration: none;
+float: left;
+border-right: 1px solid #fff;
+}
+nav ul li a:link, nav ul li a:visited {
+color: #FEB41C;
+}
+nav ul li a:hover{
+background-color: #369;
+color: #fff;
+}
+
+/* footer */
+footer {
+	padding: 10px 0;
+	background: #FEB41C;
+	position: relative;
+	clear: both;
+}
+
+/*HTML5 support */
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}

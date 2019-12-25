@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Pier 39</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<style>
+#howfar {
+	float:right;
+	margin-right:50px;
+	width:350px;
+	height:267px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<img src="images/logo.png" width="350" height="100" alt="sf tours logo" id="logo" />
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="cable-cars.html">Cable Cars</a></li>
+<li><a href="chinatown.html">Chinatown</a></li>
+<li><a href="fishermans-wharf.html">Fishermans Wharf</a></li>
+<li><a href="pier39.html">Pier 39</a></li>
+</ul>
+</nav>
+
+</header>
+  <div class="sidebar1">
+    <aside>
+      <p class="quote">"It's an odd thing, but anyone who disappears is said to be seen in San   Francisco. It must be a delightful city and possess all the attractions   of the next world" - Oscar Wilde</p>
+    </aside>
+</div>
+<h1>San Francisco Attractions</h1>
+
+
+<h2>Pier 39</h2>
+
+<img src="images/pier39-seals.jpg" width="200" height="267" alt="seals at pier 39" />
+
+<div id="howfar">
+	<h2> You are currently <span id="distance"> x </span> miles from San Fransico's famous Pier 39.</h2>
+</div>
+
+<section>
+<p>
+
+California Sea Lions have been always present in San Francisco Bay. 
+They started to haul out on docks of Pier 39 in September 1989. Before that they mostly used Seal Rock for that purpose. Ever since September 1989 the number of sea lions on Seal Rock has been steadily decreasing, while their number on Pier 39 has generally increased. Some people speculate that sea lions moved to docks because of the 1989 Loma Prieta earthquake, but the earthquake occurred months after the first sea lions had arrived at Pier 39. It is likely that the sea lions feel safer inside the Bay.
+</p>
+</section>
+
+<footer>
+<p>
+&copy; 2020 San Fransisco Designed By Paullaster
+</p>
+</footer>
+
+</div>
+<script>
+window.onload = function(){
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(showPosition,positionError);
+	} else {
+		document.getElementById("howfar").style.visibility = "hidden";
+	}
+}
+function positionError(error) {
+	document.getElementById("howfar").style.visibility = "hidden";
+}
+
+function showPosition(position) {
+	var lat1 = position.coords.latitude * Math.PI / 180 ;
+	var long1 = position.coords.longitude* Math.PI / 180 ;
+
+	var lat2 = 37.798563 * Math.PI / 180 ;
+	var long2 = -122.272687 * Math.PI / 180 ;
+	
+	var a = (long2- long1 ) * Math.cos((lat1 + lat2)/2);
+	var b = (lat2 - lat1);
+	var distance =  Math.round(Math.sqrt(a*a +b*b) * 6375);
+	document.getElementById("distance").innerHTML = distance ;
+}
+
+</script>
+</body>
+</html>

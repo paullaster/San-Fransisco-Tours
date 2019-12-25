@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Cable Cars</title>
+<head>
+<title>Pier 39</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<img src="images/logo.png" width="350" height="100" alt="sf tours logo"  id="logo" />
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="cable-cars.html">Cable Cars</a></li>
+<li><a href="chinatown.html">Chinatown</a></li>
+<li><a href="fishermans-wharf.html">Fishermans Wharf</a></li>
+<li><a href="pier39.html">Pier 39</a></li>
+</ul>
+</nav>
+
+</header>
+
+  <div class="sidebar1">
+    <aside>
+      <p class="quote">"It's an odd thing, but anyone who disappears is said to be seen in San   Francisco. It must be a delightful city and possess all the attractions   of the next world" - Oscar Wilde</p>
+    </aside>
+</div>
+<h1>San Francisco Attractions</h1>
+<h2>Cable Car Video</h2>
+
+<video id="video" width="320" height="240" poster="images/video-poster.jpg">
+  <source src="media/cablecar.mp4" type="video/mp4" />
+  <source src="media/cablecar.ogv" type="video/ogg" />
+  Your browser does not support the video tag.
+</video>
+
+<img id="button" src="images/play.jpg" onClick="playPause()" />
+<footer>
+<p>
+&copy; 2020 San Fransisco Designed By Paullaster
+</p>
+</footer>
+
+</div>
+<script>
+function playPause(){
+	if (document.getElementById("video").paused){
+		document.getElementById("video").play();
+		document.getElementById("button").src = "images/pause.jpg";
+	}else{
+		document.getElementById("video").pause();
+		document.getElementById("button").src = "images/play.jpg";
+	}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Fishermans Wharf</title>
+<head>
+<title>Pier 39</title>
+<script src="js/puzzle.js" ></script>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<style>
+.puzzle {
+height:380px;
+}
+.puzzleframe {
+position:relative;
+float:right;
+margin-right:40px;
+width:200px;
+height:298px;
+border:1px solid #000000;
+}
+#div1 {
+position:absolute;
+bottom:0;
+right:0;
+width:100px;
+height:167px;
+
+}
+#div2 {
+position:absolute;
+top:0;
+left:0;
+width:115px;
+height:189px;
+
+}
+#div3 {
+position:absolute;
+bottom:0;
+left:0;
+width:136px;
+height:146px;
+
+}
+#div4 {
+position:absolute;
+top:0;
+right:0;
+width:123px;
+height:167px;
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<img src="images/logo.png" width="350" height="100" alt="sf tours logo"  id="logo" />
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="cable-cars.html">Cable Cars</a></li>
+<li><a href="chinatown.html">Chinatown</a></li>
+<li><a href="fishermans-wharf.html">Fishermans Wharf</a></li>
+<li><a href="pier39.html">Pier 39</a></li>
+</ul>
+</nav>
+
+</header>
+  <div class="sidebar1">
+    <aside>
+      <p class="quote">"It's an odd thing, but anyone who disappears is said to be seen in San   Francisco. It must be a delightful city and possess all the attractions   of the next world" - Oscar Wilde</p>
+    </aside>
+</div>
+<h1>San Francisco Attractions</h1>
+
+<h2> Fishermans Wharf</h2>
+<div class="puzzle">
+<div class="puzzleframe">
+<div id="div1" ondragover="allowDrop(event)"  ondrop="drop(event)"></div>
+<div id="div2" ondragover="allowDrop(event)"  ondrop="drop(event)"></div>
+<div id="div3" ondragover="allowDrop(event)"  ondrop="drop(event)"></div>
+<div id="div4" ondragover="allowDrop(event)"  ondrop="drop(event)"></div>
+</div>
+
+<img id="dragItem1" src="images/fishermans-wharf-puzzle1.png" draggable="true" ondragstart = "drag(event)"/>
+<img id="dragItem2" src="images/fishermans-wharf-puzzle2.png" draggable="true" ondragstart = "drag(event)"/>
+<img id="dragItem3" src="images/fishermans-wharf-puzzle3.png" draggable="true" ondragstart = "drag(event)"/>
+<img id="dragItem4" src="images/fishermans-wharf-puzzle4.png" draggable="true" ondragstart = "drag(event)"/>
+</div>
+
+<section>
+<p>Fisherman's Wharf gets its name and neighborhood characteristics from the city's early days during the Gold Rush where Italian emigre fishermen settled in the area and fished for the Dungeness Crab. From then until present day it remained the home base of San Francisco's fishing fleet. Despite its redevelopment into a tourist attraction during the 1970s and 1980s, the area is still home to many active fishermen and their fleets.</p>
+</section>
+
+<footer>
+<p>
+&copy; 2020 San Fransisco Designed By Paullaster
+</p>
+</footer>
+
+</div>
+
+</body>
+</html>

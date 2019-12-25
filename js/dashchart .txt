@@ -1,0 +1,96 @@
+<div class="smallwindow" id="ctl00_cp_metrics">
+	
+            <h2 class="hybridFormHeader">
+                <span class="hybridFormTitlewrap">
+					Overview<span id="overview"> 03-Aug to 09-Aug </span>
+					<a href="/AdminConsole/#!/Reports/Report_Content_Graphical.aspx" class="titlelink hybridFormTitlewrap" title="View more reports" data-link-processed="true" target="_top">
+						View more reports
+					</a>
+				</span>
+                <span id="loading" style="visibility:hidden;"><img width="25" height="25" src="http://njcdn.worldsecuresystems.com/CatalystImages/loading.gif" alt="Loading"></span>
+             </h2>
+
+            <div class="graph">
+                <div align="left" id="dashboardChartdiv"><embed width="100%" height="162" flashvars="chartWidth=100%&amp;chartHeight=162&amp;debugMode=0&amp;DOMId=dashboardChart&amp;registerWithJS=1&amp;scaleMode=noScale&amp;lang=EN&amp;dataXML=&lt;chart  bgColor='#ffffff' showValues='0' showBorder='0' chartBottomMargin='5' chartRightMargin='0' chartLeftMargin='0' lineThickness='3' lineColor='0050be' drawAnchors='1' anchorRadius='4' anchorBorderThickness='0' divLineThickness='1' divLineColor='e9f5f9' vDivLineColor='e9f5f9' numVDivLines='4' palette='1' paletteColors='2A94E2,70B5E7,1D669A,124162,263D4E' showShadow='1' plotBorderColor='2A94E2' plotFillColor='2A94E2' plotFillAlpha='20' plotBorderThickness='2' anchorBgColor='2A94E2' vDivLineAlpha='100' anchorAlpha='100' anchorSides='13' anchorBorderAlpha='0' canvasPadding='20' canvasBorderAlpha='0' plotGradientColor='' legendBorderThickness='0' legendBorderColor='#ffffff' legendShadow='0' labelStep='1'&gt;&lt;set label='03-Aug' value='651' tooltext='Date+-+03-Aug%26lt%3bBR%26gt%3bVisits+-+651' /&gt;&lt;set label='04-Aug' value='493' tooltext='Date+-+04-Aug%26lt%3bBR%26gt%3bVisits+-+493' /&gt;&lt;set label='05-Aug' value='482' tooltext='Date+-+05-Aug%26lt%3bBR%26gt%3bVisits+-+482' /&gt;&lt;set label='06-Aug' value='636' tooltext='Date+-+06-Aug%26lt%3bBR%26gt%3bVisits+-+636' /&gt;&lt;set label='07-Aug' value='1077' tooltext='Date+-+07-Aug%26lt%3bBR%26gt%3bVisits+-+1077' /&gt;&lt;set label='08-Aug' value='1658' tooltext='Date+-+08-Aug%26lt%3bBR%26gt%3bVisits+-+1658' /&gt;&lt;set label='09-Aug' value='1027' tooltext='Date+-+09-Aug%26lt%3bBR%26gt%3bVisits+-+1027' /&gt;&lt;styles&gt;&lt;definition&gt;&lt;style name='myHTMLFont' type='font' isHTML='1' /&gt;&lt;style name='CanvasAnim' type='animation' param='_xScale' start='0' duration='1' /&gt;&lt;/definition&gt;&lt;application&gt;&lt;apply toObject='TOOLTIP' styles='myHTMLFont' /&gt; &lt;apply toObject='Canvas' styles='CanvasAnim' /&gt;&lt;/application&gt;&lt;/styles&gt;&lt;trendLines&gt;&lt;line startValue='0' color='aaaaaa' thickness='2' displayvalue='' /&gt;&lt;/trendLines&gt;&lt;/chart&gt;" allowscriptaccess="always" quality="high" name="dashboardChart" id="dashboardChart" src="/CatalystImages/FusionCharts/Area2D.swf?ChartNoDataText=No data to display. Report statistics updated every 2 hours.&amp;LoadDataErrorText=No data to display. Report statistics updated every 2 hours.&amp;InvalidXMLText=Invalid data. Please report this to support." type="application/x-shockwave-flash" wmode="transparent"></div>
+<script type="text/javascript">
+var chart_dashboardChart = new FusionCharts2("/CatalystImages/FusionCharts/Area2D.swf?ChartNoDataText=No data to display. Report statistics updated every 2 hours.&amp;LoadDataErrorText=No data to display. Report statistics updated every 2 hours.&amp;InvalidXMLText=Invalid data. Please report this to support.", "dashboardChart", "100%", "162", "0", "1");
+chart_dashboardChart.setDataXML("&lt;chart  bgColor='#ffffff' showValues='0' showBorder='0' chartBottomMargin='5' chartRightMargin='0' chartLeftMargin='0' lineThickness='3' lineColor='0050be' drawAnchors='1' anchorRadius='4' anchorBorderThickness='0' divLineThickness='1' divLineColor='e9f5f9' vDivLineColor='e9f5f9' numVDivLines='4' palette='1' paletteColors='2A94E2,70B5E7,1D669A,124162,263D4E' showShadow='1' plotBorderColor='2A94E2' plotFillColor='2A94E2' plotFillAlpha='20' plotBorderThickness='2' anchorBgColor='2A94E2' vDivLineAlpha='100' anchorAlpha='100' anchorSides='13' anchorBorderAlpha='0' canvasPadding='20' canvasBorderAlpha='0' plotGradientColor='' legendBorderThickness='0' legendBorderColor='#ffffff' legendShadow='0' labelStep='1'&gt;&lt;set label='03-Aug' value='651' tooltext='Date+-+03-Aug%26lt%3bBR%26gt%3bVisits+-+651' /&gt;&lt;set label='04-Aug' value='493' tooltext='Date+-+04-Aug%26lt%3bBR%26gt%3bVisits+-+493' /&gt;&lt;set label='05-Aug' value='482' tooltext='Date+-+05-Aug%26lt%3bBR%26gt%3bVisits+-+482' /&gt;&lt;set label='06-Aug' value='636' tooltext='Date+-+06-Aug%26lt%3bBR%26gt%3bVisits+-+636' /&gt;&lt;set label='07-Aug' value='1077' tooltext='Date+-+07-Aug%26lt%3bBR%26gt%3bVisits+-+1077' /&gt;&lt;set label='08-Aug' value='1658' tooltext='Date+-+08-Aug%26lt%3bBR%26gt%3bVisits+-+1658' /&gt;&lt;set label='09-Aug' value='1027' tooltext='Date+-+09-Aug%26lt%3bBR%26gt%3bVisits+-+1027' /&gt;&lt;styles&gt;&lt;definition&gt;&lt;style name='myHTMLFont' type='font' isHTML='1' /&gt;&lt;style name='CanvasAnim' type='animation' param='_xScale' start='0' duration='1' /&gt;&lt;/definition&gt;&lt;application&gt;&lt;apply toObject='TOOLTIP' styles='myHTMLFont' /&gt; &lt;apply toObject='Canvas' styles='CanvasAnim' /&gt;&lt;/application&gt;&lt;/styles&gt;&lt;trendLines&gt;&lt;line startValue='0' color='aaaaaa' thickness='2' displayvalue='' /&gt;&lt;/trendLines&gt;&lt;/chart&gt;");
+chart_dashboardChart.render("dashboardChartdiv");
+</script>
+
+				<!-- Zoom Markup -->
+				<ul class="zoom">
+					<li class="out">
+						<a onclick="ChangeChartPeriod(true);return false;" href="#">Zoom out</a>
+					</li>
+					<li class="in">
+						<a onclick="ChangeChartPeriod(false);return false;" href="#">Zoom in</a>
+					</li>
+				</ul>
+            </div>
+
+			<div class="graphLabels" id="my-glider">
+		        <div id="scroller" class="scroller">
+                    <div class="content">
+                            <div id="section1" class="section">
+                                <ul class="domtabs">
+                                    <li class="g1">
+                                        <a href="#g1" onclick="CreateChart(1);return false;" class="selected" id="ctl00_cp_hlVisits">
+                                            <div class="var">
+                                                Visits</div>
+                                            <div class="percent-up">+6%</div><div class="val">6,024<div class="val-alt">Unique Visits: 3915</div></div></a>
+                                    </li>
+                                    <li class="g2">
+                                        <a href="#g2" onclick="CreateChart(2);return false;" id="ctl00_cp_hlSales">
+                                        <div class="var">
+                                            Online Sales</div>
+                                        <div class="percent-up">+14%</div><div class="val">$16,307<div class="val-alt">Orders: 265</div></div></a>
+                                    </li>
+                                    <li class="g3">
+                                        <a href="#g3" onclick="CreateChart(3);return false;" id="ctl00_cp_hlEnquiries">
+                                        <div class="var">
+                                            Inquiries</div>
+                                        <div class="percent-up">+31%</div><div class="val">124<div class="val-alt">New Customers: 223</div></div></a>
+                                    </li>
+                                    <li class="g4">
+                                        <a href="#g4" onclick="CreateChart(4);return false;" id="ctl00_cp_hlSubscriptions">
+                                        <div class="var">
+                                            Subscriptions</div>
+                                        <div class="percent-up">+10%</div><div class="val">64<div class="val-alt">Unsubscriptions: 44</div></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="section2" class="section">
+                                <ul class="domtabs">
+                                    <li class="g1">
+                                        <a href="#g1" onclick="CreateChart(5);return false;" id="ctl00_cp_hlForumPosts">
+                                            <div class="var">
+                                                Forum Posts</div>
+                                            <div class="percent-zero">0%</div><div class="val">0<div class="val-alt">New Forum Topics: 0</div></div></a>
+                                    </li>
+                                    <li class="g2">
+                                        <a href="#g2" onclick="CreateChart(6);return false;" id="ctl00_cp_hlBookings">
+                                            <div class="var">
+                                                Events</div>
+                                            <div class="percent-zero">0%</div><div class="val">0<div class="val-alt">New Events: 0</div></div></a>
+                                    </li>
+                                    <li class="g3">
+                                        <a href="#g3" onclick="CreateChart(7);return false;" id="ctl00_cp_hlSecureZones">
+                                        <div class="var">
+                                            Secure Zone Logins</div>
+                                        <div class="percent-up">+9%</div><div class="val">95<div class="val-alt">Unique Visitors: 78</div></div></a>
+                                    </li>
+                                    <li class="g4">
+                                        <a href="#g4" onclick="CreateChart(8);return false;" id="ctl00_cp_hlAffiliateReferrals">
+                                        <div class="var">
+                                            Affiliate Referrals</div>
+                                        <div class="percent-zero">0%</div><div class="val">0<div class="val-alt">Affiliate Programs: 0</div></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div><!-- END .content -->
+                </div><!-- END .scroller -->
+            </div>
+	        <div id="nav-glider" style="width: 760px;"><a id="previous" href="#"><img alt="" src="http://njcdn.worldsecuresystems.com/CatalystImages/a16/play-back.png">&nbsp;&nbsp;</a><a id="next" href="#"><img alt="" src="http://njcdn.worldsecuresystems.com/CatalystImages/a16/play.png"></a></div>
+        
+</div>

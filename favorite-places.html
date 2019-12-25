@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<title>San Francisco Favorite Places</title>
+<style>
+html, body{
+	width:100%;
+	height:100%
+	margin:0;
+	font-size: 16px;
+}
+#labels {
+	float:left;
+	width:40%;
+	text-align:right;
+}
+#inputs {
+	float:right;
+	width:55%;
+	text-align:left;
+}
+#controls {
+	clear:both;
+}
+#placeForm {
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div id="placeForm">
+<img src="images/logo.png" width="350" height="100">
+<h2>San Francisco Favorite Places</h2>
+<p>Places Stored : <span id="numPlaces">0</span></p>
+
+<div id="storedPlaces"></div>
+
+<button onClick="clearPlaces()">clear all places</button>
+
+<div id="status"></div>
+
+<h2>add a new place</h2>
+
+<div id="addPlaceForm">
+      <div id="labels">
+        	<label for="newPlace">Place Name:</label><br/>
+        	<label for="newNote">Notes:</label><br/>
+       		<label for="newLat">Latitude:</label>  <br/>
+       		<label for="newLong">Longitude:</label>   <br/>  <br/>
+	</div>
+      <div id="inputs">
+		<input type="text" id="newPlace" /><br/>
+        	<input type="text" id="newNote" /><br/>
+        	<input type="text" id="newLat" /><br/>
+        	<input type="text" id="newLong" /><br/><br/>
+      </div>
+ </div>   
+
+    <div id="controls">
+    	<button onClick="getLocation();">get location</button>
+   	 <button onClick="addPlace();">add a place</button>
+    </div>
+    
+<script>
+var count = 0;
+var places = new Array();
+var notes = new Array();
+var latitudes = new Array();
+var longitudes = new Array();
+var msg = "none";
+
+window.onload = function() {
+if( typeof(Storage) == "undefined") {
+	alert("Your browser does not allow saving places.");
+} else {
+ if (Number(localStorage.count) > 0 ){
+	initPlaces();
+}
+}
+}
+
+function initPlaces(){
+	count = Number(localStorage.count);
+	places = JSON.parse(localStorage.places);
+	notes = JSON.parse(localStorage.notes);
+	latitudes = JSON.parse(localStorage.latitudes);
+	longitudes = JSON.parse(localStorage.longitudes);
+
+	showPlaces();
+}
+
+function addPlace(){	
+  	newPlace = document.getElementById("newPlace").value;
+	places.push(newPlace);
+	localStorage.places = JSON.stringify(places);
+  	newNote = document.getElementById("newNote").value;
+	notes.push(newNote);
+	localStorage.notes = JSON.stringify(notes);
+  	newLat = document.getElementById("newLat").value;
+	latitudes.push(newLat);
+	localStorage.latitudes = JSON.stringify(latitudes);
+  	newLong = document.getElementById("newLong").value;
+	longitudes.push(newLong);
+	localStorage.longitudes = JSON.stringify(longitudes);
+
+	count = count +1;
+	localStorage.count = count;
+
+	initPlaces();
+}
+
+function clearPlaces(){
+	localStorage.clear();
+	document.location.reload(true);
+}
+
+function showPlaces(){
+ 	document.getElementById("numPlaces").innerHTML = count;
+	var placeData = '';
+	for (var i=0; i < count; i++ ) {
+		placeData += "Name: " + places[i] + "<br/>";
+		placeData += "Notes: " + notes[i] + "<br/>";
+		//placeData += "Latitude: " + latitudes[i] + "<br/>";
+		//placeData += "Longitude: " + longitudes[i] + "<br/><br/>";
+		latlong  = latitudes[i] + "," + longitudes[i];
+		mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + latlong + "&markers=color:blue%7Clabel:1%7C" +latlong + "&zoom=14&size=300x400&sensor=false";
+		placeData += "<a href=' " + mapURL + " ' />click for map</a><br/><br/>";
+	}
+	document.getElementById("storedPlaces").innerHTML  = placeData;
+}
+
+function getLocation(){
+	if (navigator.geolocation) {
+	  	navigator.geolocation.getCurrentPosition(showPosition);
+ 	 } else {
+	  	alert("this browser does not support geolocation");
+  	}
+}
+
+function showPosition(position) {	
+	document.getElementById("newLat").value = position.coords.latitude;
+	document.getElementById("newLong").value = position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
